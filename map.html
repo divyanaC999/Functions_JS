@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+<head>
+    <title>
+        JavaScript mapping using loops
+    </title>
+</head>
+  
+<body>
+    <script>
+        var arr = [3, 5, 11, 4, 9, 7];
+        var result = [];
+        let i;
+  
+        //returns square of a number
+        const square = function(num){  
+            return num*num;
+        }
+  
+        for(i=0; i< arr.length; i++){
+            result.push(square(arr[i]));
+        }
+  
+        console.log(result);
+        
+  
+    </script>
+</body>
+  
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>JavaScript filter using conditions</title>    
+  </head>
+
+  <body>
+    <script>
+      var arr = [9, 12, 11, 2, 20];
+      var result = [];
+      let i;
+      let j;
+      var flag = 0;
+
+      //Will return prime number
+      const primeNo = function (num) {
+        for (i = 2; i <= num / 2; i++) {
+          if (num % i == 0) {
+            flag += 1;
+            break;
+          }
+        }
+        return flag;
+      };
+
+      //Getting all the prime number into an array
+      for (j = 0; j < arr.length; j++) {
+        if (primeNo(arr[j]) == 0) {
+          result.push(arr[j]);
+        }
+        flag = 0;
+      }
+
+      console.log(result);
+      
+    </script>
+  </body>
+</html>

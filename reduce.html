@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>
+        JavaScript Reduce using loops
+    </title>
+  </head>
+
+  <body>
+
+    <script>
+
+        
+      const listofNumbers = [3, 5, 6, 8, 10];
+      let output = 0;
+
+      //Function to implement reduce method
+      const reduceFunction = function(listofNumbers, callback, initialValue) {
+        let reduceValue = initialValue;
+        for (let index = 0; index < listofNumbers.length; index++) {
+          reduceValue = callback(reduceValue, listofNumbers[index], index, listofNumbers);
+        }
+        return reduceValue;
+      }
+
+      //to find sum
+      result = reduceFunction(
+        listofNumbers,
+        (sum, num) => {
+          sum += num;
+          return sum;
+        },
+        0
+      );
+      console.log("Sum of all elements in the array ", result);
+    </script>
+  </body>
+</html>
